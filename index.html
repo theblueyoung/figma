@@ -3,83 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MODUL — Architecture &amp; Interior Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>MODUL Architects — Architecture &amp; Interior</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F6F4F0; --ink:#16171A; --stone:#E4E0D8; --gray:#7A776F; --brass:#A88B5E;
-  --serif:'Cormorant Garamond','Noto Serif KR',serif;
-  --sans:'Inter','Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+  --bg:#F2F2F2; --bg2:#E4E4E4; --red:#FF2D05;
+  --serif:'Instrument Serif','Noto Serif KR',serif;
+  --sans:'Inter Tight','Noto Sans KR','Apple SD Gothic Neo',Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#cfcbc2;font-family:var(--sans);font-weight:300;color:var(--ink);-webkit-font-smoothing:antialiased}
+body{background:#cfcfcf;font-family:var(--sans);color:var(--red);font-weight:400;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .page{width:1500px;max-width:100%;margin:0 auto;background:var(--bg)}
-.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:16px;border:1px solid var(--ink);padding:14px 30px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:400;transition:.25s}
-.btn:hover{background:var(--ink);color:#fff}
+.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.ph{background:linear-gradient(150deg,#d4d1cb,#a9a69f);position:relative}
+.ph::after{content:"IMAGE";position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.3em;color:rgba(0,0,0,.35)}
+.ph.bw{background:linear-gradient(150deg,#bdbdbd,#6f6f6f)}
+.ph.warm{background:linear-gradient(150deg,#e3d6c5,#b9a68d)}
+.ul{border-bottom:1px solid currentColor}
+
+/* top bar */
+.bar{position:absolute;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:flex-start;padding:26px 36px;z-index:5;font-size:18px}
+.bar .brand{font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding-top:4px}
+.bar nav{display:flex;gap:18px;font-size:22px;font-weight:300}
 
 /* 1. HERO — 800 */
-.hero{height:800px;position:relative;color:#fff;overflow:hidden;
-  background:
-   linear-gradient(90deg,rgba(14,15,17,.62) 0%,rgba(14,15,17,.15) 65%),
-   repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 2px,transparent 2px 60px),
-   linear-gradient(165deg,#8a867d 0%,#4a4a4a 40%,#1b1c1f 100%)}
-.hero .sun{position:absolute;right:-180px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(255,236,200,.35),transparent 65%)}
-header{position:absolute;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:center;padding:0 60px;height:100px;z-index:3;border-bottom:1px solid rgba(255,255,255,.18)}
-.logo{font-family:var(--serif);font-size:30px;letter-spacing:.34em;font-weight:500}
-nav{display:flex;gap:56px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:400}
-.admin{font-size:11px;letter-spacing:.24em;border:1px solid rgba(255,255,255,.6);padding:10px 22px}
-.hero h1{position:absolute;left:60px;bottom:90px;font-family:var(--serif);font-weight:400;font-size:132px;line-height:.98;letter-spacing:-.01em}
-.hero h1 em{color:#d8c4a0}
-.hcard{position:absolute;right:60px;top:240px;width:440px;background:var(--bg);color:var(--ink);padding:48px 46px 44px}
-.hcard h2{font-family:var(--serif);font-size:44px;font-weight:500;line-height:1.1;margin:14px 0 18px}
-.hcard p{font-size:14px;line-height:1.9;color:var(--gray);margin-bottom:32px}
-.scroll{position:absolute;left:60px;top:150px;font-size:11px;letter-spacing:.3em;writing-mode:vertical-rl;color:rgba(255,255,255,.7)}
+.hero{height:800px;position:relative;overflow:hidden}
+.mail{position:absolute;left:36px;top:78px;font-size:30px}
+.hero h1{position:absolute;left:30px;top:128px;font-family:var(--serif);font-weight:400;font-size:222px;line-height:.84;letter-spacing:-.01em;text-transform:uppercase;z-index:3;white-space:nowrap}
+.hero .photo{position:absolute;right:36px;top:270px;width:560px;height:530px;z-index:2}
+.hero .intro{position:absolute;left:36px;bottom:60px;width:480px;z-index:4}
+.hero .intro .it{font-size:34px;margin-bottom:14px}
+.hero .intro p{font-size:18px;line-height:1.5;font-weight:300;margin-bottom:26px}
+.pill{display:inline-block;border:1.5px solid var(--red);border-radius:999px;padding:10px 26px;font-size:16px;font-weight:500;transition:.2s}
+.pill:hover{background:var(--red);color:var(--bg)}
 
-/* 2. PHILOSOPHY — 600 */
-.philo{height:600px;display:grid;grid-template-columns:520px 380px;gap:110px;justify-content:center;align-items:center}
-.img{background:linear-gradient(145deg,#cfc9bc,#a9a395);position:relative}
-.img::after{content:"IMAGE";position:absolute;left:18px;bottom:14px;font-size:10px;letter-spacing:.3em;color:rgba(0,0,0,.35)}
-.philo .img{height:400px}
-.philo h3{font-family:var(--serif);font-size:48px;font-weight:500;line-height:1.1;margin:14px 0 22px}
-.philo p{font-size:16px;line-height:2;color:var(--gray);margin-bottom:38px}
+/* 2. ABOUT — 600 */
+.about{height:600px;background:var(--bg2);display:grid;grid-template-columns:430px 1fr;gap:100px;padding:60px 36px 60px 36px}
+.about .ph{height:100%}
+.about .t{display:flex;flex-direction:column;justify-content:space-between;padding-right:160px}
+.about .lab{font-size:34px}
+.about p{font-size:26px;line-height:1.35;font-weight:300;max-width:620px;margin-top:22px}
+.about .last .it{font-size:34px;margin-bottom:6px}
+.about .last p{font-size:20px;margin:0}
 
 /* 3. SPLIT — 600 */
-.split{display:grid;grid-template-columns:1fr 1fr;height:600px}
-.sl{background:var(--ink);color:#fff;padding:0 90px 0 150px;display:flex;flex-direction:column;justify-content:center;gap:44px}
-.it{display:grid;grid-template-columns:56px 1fr;gap:26px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.14)}
-.it:last-child{border:0;padding:0}
-.it .n{font-family:var(--serif);font-size:30px;color:var(--brass)}
-.it h4{font-size:13px;letter-spacing:.26em;font-weight:500;margin:6px 0 10px}
-.it p{font-size:14px;line-height:1.9;color:#a9a8a2}
-.sr{background:var(--stone);padding:80px 110px 0 90px}
-.sr h3{font-family:var(--serif);font-size:44px;font-weight:500;margin-bottom:30px}
-.nt{background:var(--bg);padding:26px 30px;margin-bottom:16px}
-.nt time{font-size:11px;letter-spacing:.2em;color:var(--brass);font-weight:500}
-.nt b{display:block;font-weight:500;font-size:17px;margin:8px 0}
-.nt p{font-size:13px;line-height:1.8;color:var(--gray)}
+.split{height:600px;display:grid;grid-template-columns:1fr 1fr;border-top:1.5px solid var(--red)}
+.sl,.sr{padding:60px 36px}
+.sr{border-left:1.5px solid var(--red)}
+.split .lab{font-size:34px;margin-bottom:46px}
+.row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:22px 0;border-top:1px solid rgba(255,45,5,.35);align-items:start}
+.row:first-of-type{border-top:0}
+.row small{font-size:14px;line-height:1.3;padding-top:8px}
+.row b{font-weight:400;font-size:38px;letter-spacing:-.02em;line-height:1.1}
+.row span{display:block;font-size:15px;font-weight:300;margin-top:8px;line-height:1.5;letter-spacing:0}
 
-/* 4. PROJECTS — 640 */
-.works{height:700px;padding:80px 150px 0;text-align:center}
-.works h3{font-family:var(--serif);font-size:48px;font-weight:500;margin:12px 0 44px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:left}
-.cards .img{height:320px}
-.cards .c2{background:linear-gradient(145deg,#8e8a80,#5f5c55)}
-.cards .c3{background:linear-gradient(145deg,#d9d3c5,#bdb6a5)}
-.cards small{display:block;font-size:11px;letter-spacing:.24em;color:var(--brass);margin:18px 0 6px;text-transform:uppercase;font-weight:500}
-.cards h5{font-family:var(--serif);font-size:26px;font-weight:500}
-.cards p{font-size:13px;color:var(--gray);margin-top:4px}
+/* 4. WORKS — 700 */
+.works{background:var(--bg2);padding:50px 36px 0;height:700px}
+.works .lab{font-size:34px;margin-bottom:60px;display:inline-block}
+.wgrid{display:grid;grid-template-columns:1.2fr 1fr 1.2fr;gap:30px;align-items:end}
+.wgrid .ph{height:300px}
+.wgrid article:nth-child(2) .ph{height:380px}
+.cap{margin-top:16px;font-size:30px;font-weight:600;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+.cap small{display:block;font-size:14px;font-weight:400;letter-spacing:.02em;margin-top:8px;text-transform:none}
 
 /* footer */
-footer{background:var(--ink);color:#8d8b85;padding:56px 150px;display:flex;align-items:center;gap:90px;font-size:12px;line-height:2}
-footer .logo{color:#fff;font-size:28px}
+footer{background:var(--bg);padding:50px 36px 30px;height:420px;position:relative}
+footer .nm{font-size:76px;line-height:.95;font-weight:400;letter-spacing:-.02em;margin-top:60px}
+footer .it{font-size:34px}
+footer .lk{position:absolute;right:36px;bottom:60px;font-size:24px}
+footer .lk a{border-bottom:1px solid currentColor}
+footer .mini{position:absolute;left:36px;bottom:28px;font-size:13px}
 
 @media (max-width:1000px){
-  .hero{height:auto;padding-bottom:50px}.hero h1{position:relative;left:0;bottom:0;font-size:68px;padding:180px 24px 30px}
-  .hcard{position:relative;right:auto;top:auto;width:calc(100% - 48px);margin:0 24px}nav,.scroll{display:none}header{padding:0 24px}
-  .philo,.split,.cards{grid-template-columns:1fr}.philo{height:auto;padding:60px 24px;gap:40px}
-  .sl,.sr{padding:50px 24px}.works{height:auto;padding:60px 24px}footer{padding:40px 24px;flex-direction:column;align-items:flex-start;gap:20px}
+  .hero{height:auto;padding:130px 24px 40px}.hero h1,.hero .photo,.hero .intro,.mail{position:relative;left:0;top:0;right:0;bottom:0}
+  .hero h1{font-size:19vw;line-height:.9}.mail{display:block;margin:8px 0 14px}.hero .photo{width:100%;height:320px;margin:20px 0}.hero .intro{width:100%}
+  .bar{padding:20px 24px}.about,.split,.wgrid{grid-template-columns:1fr}.about{height:auto;gap:30px;padding:40px 24px}.about .t{padding:0;gap:30px}
+  .sl,.sr{padding:40px 24px}.sr{border-left:0;border-top:1.5px solid var(--red)}.split{height:auto}.works{height:auto;padding:40px 24px}
+  .row b{font-size:28px}footer{padding:40px 24px;height:auto}footer .lk,footer .mini{position:relative;right:auto;left:auto;bottom:auto;display:block;margin-top:24px}
 }
 </style>
 </head>
@@ -88,64 +89,62 @@ footer .logo{color:#fff;font-size:28px}
 
 <!-- 1. HERO -->
 <section class="hero">
-  <div class="sun"></div>
-  <header>
-    <a class="logo" href="#">MODUL</a>
-    <nav><a href="#">Studio</a><a href="#">Projects</a><a href="#">Journal</a><a href="#">Contact</a></nav>
-    <a class="admin" href="#">ADMIN</a>
-  </header>
-  <div class="scroll">SCROLL</div>
-  <h1>Space,<br><em>quietly</em> composed.</h1>
-  <div class="hcard">
-    <div class="eyebrow">Architecture &amp; Interior</div>
-    <h2>(주) 모듈<br>건축사사무소</h2>
-    <p>2009년 설립된 모듈은 빛과 재료, 비례에 집중하는 건축·인테리어 스튜디오입니다. 절제된 형태로 오래 머물고 싶은 공간을 설계합니다.</p>
-    <a class="btn" href="#">회사소개 <span>→</span></a>
+  <div class="bar"><a class="brand" href="#">MODUL Architects</a><nav><a href="#">Info</a><a href="#">Projects</a><a href="#">Admin</a></nav></div>
+  <div class="mail it">hello@modul.kr</div>
+  <h1>Architecture<br>Interior</h1>
+  <div class="photo ph bw"></div>
+  <div class="intro">
+    <div class="it">Architecture &amp; Interior Studio</div>
+    <p>(주) 모듈은 2009년 서울에서 설립되었습니다. 빛과 재료, 비례에 집중해 오래 머물고 싶은 공간을 설계합니다.</p>
+    <a class="pill" href="#">회사소개 →</a>
   </div>
 </section>
 
-<!-- 2. PHILOSOPHY -->
-<section class="philo">
-  <div class="img"></div>
-  <div>
-    <div class="eyebrow">Philosophy</div>
-    <h3>설계 철학</h3>
-    <p>불필요한 것을 덜어내고<br>빛과 재료의 본질만 남깁니다.<br>시간이 지날수록 깊어지는 공간을 만듭니다.</p>
-    <a class="btn" href="#">자세히보기</a>
+<!-- 2. ABOUT -->
+<section class="about">
+  <div class="ph bw"></div>
+  <div class="t">
+    <div>
+      <div class="lab it">설계 철학</div>
+      <p>불필요한 것을 덜어내고 빛과 재료의 본질만 남깁니다. 시간이 지날수록 깊어지는 공간을 만드는 것, 그것이 모듈의 설계 철학입니다. 주거, 문화, 상업 공간 전반에서 하이엔드 프로젝트를 수행합니다.</p>
+      <a class="pill" href="#" style="margin-top:26px">자세히보기</a>
+    </div>
+    <div class="last"><div class="it">Latest Project</div><p>House N, 성수 — 2026 완공 예정</p></div>
   </div>
 </section>
 
 <!-- 3. SPLIT -->
 <section class="split">
   <div class="sl">
-    <div class="it"><span class="n">01</span><div><h4>VISION</h4><p>기능과 아름다움이 하나가 되는 건축으로 삶의 질을 높입니다.</p></div></div>
-    <div class="it"><span class="n">02</span><div><h4>PROCESS</h4><p>콘셉트, 설계, 시공 감리까지 한 팀이 전 과정을 책임집니다.</p></div></div>
-    <div class="it"><span class="n">03</span><div><h4>SERVICES</h4><p>건축 설계, 인테리어, 가구 디자인, 공간 컨설팅.</p></div></div>
+    <div class="lab it">Approach</div>
+    <div class="row"><small>01</small><div><b>Vision</b><span>기능과 아름다움이 하나가 되는 건축으로 삶의 질을 높입니다.</span></div></div>
+    <div class="row"><small>02</small><div><b>Process</b><span>콘셉트, 설계, 시공 감리까지 한 팀이 책임집니다.</span></div></div>
+    <div class="row"><small>03</small><div><b>Services</b><span>건축 설계, 인테리어, 가구 디자인, 공간 컨설팅.</span></div></div>
   </div>
   <div class="sr">
-    <h3>공지사항</h3>
-    <div class="nt"><time>2026.10.28</time><b>2026 서울 건축 문화상 최종 후보 선정</b><p>성수동 ‘House N’ 프로젝트가 주거 부문 최종 후보에 올랐습니다.</p></div>
-    <div class="nt"><time>2026.09.15</time><b>한남동 신규 스튜디오 및 쇼룸 오픈</b><p>재료 라이브러리와 쇼룸을 함께 공개합니다.</p></div>
+    <div class="lab it">공지사항</div>
+    <div class="row"><small>2026.10.28</small><div><b>서울 건축 문화상 최종 후보 선정</b><span>‘House N’ 프로젝트가 주거 부문 최종 후보에 올랐습니다.</span></div></div>
+    <div class="row"><small>2026.09.15</small><div><b>한남동 신규 스튜디오·쇼룸 오픈</b><span>재료 라이브러리와 쇼룸을 함께 공개합니다.</span></div></div>
   </div>
 </section>
 
-<!-- 4. PROJECTS -->
+<!-- 4. WORKS -->
 <section class="works">
-  <div class="eyebrow">Selected Projects</div>
-  <h3>대표 프로젝트</h3>
-  <div class="cards">
-    <article><div class="img"></div><small>Residential · 2026</small><h5>House N, 성수</h5><p>콘크리트와 목재로 구성한 단독주택</p></article>
-    <article><div class="img c2"></div><small>Culture · 2025</small><h5>Gallery H, 한남</h5><p>자연광을 다루는 전시 공간</p></article>
-    <article><div class="img c3"></div><small>Interior · 2025</small><h5>Lounge E, 을지로</h5><p>석재와 황동의 호텔 라운지</p></article>
+  <div class="lab it ul">Select Works</div>
+  <div class="wgrid">
+    <article><div class="ph warm"></div><div class="cap">House N<small>Residential, 성수 — 2026</small></div></article>
+    <article><div class="ph bw"></div><div class="cap">Gallery H<small>Culture, 한남 — 2025</small></div></article>
+    <article><div class="ph"></div><div class="cap">Lounge E<small>Interior, 을지로 — 2025</small></div></article>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a class="logo" href="#">MODUL</a>
-  <p>주소 : 서울특별시 성동구 성수이로 00 &nbsp;|&nbsp; 대표자 : 홍길동 &nbsp;|&nbsp; 사업자등록번호 : 000-00-00000<br>
-  TEL : 02-000-0000 &nbsp;|&nbsp; E-MAIL : studio@modul.kr<br>
-  Copyright © MODUL Architects. All rights reserved.</p>
+  <div class="it">Let’s build something quiet.</div>
+  <div class="nm">MODUL ARCHITECTS</div>
+  <div class="it" style="font-size:34px;margin-top:6px">hello@modul.kr</div>
+  <div class="lk"><a href="#">Instagram</a>, <a href="#">Email</a>, <a href="#">Linkedin</a></div>
+  <div class="mini">서울특별시 성동구 성수이로 00 · TEL 02-000-0000 · © MODUL Architects</div>
 </footer>
 
 </div>
